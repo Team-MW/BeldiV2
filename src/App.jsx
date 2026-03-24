@@ -38,6 +38,14 @@ const App = () => {
 
   return (
     <div>
+      {/* Editorial Vertical Grid Lines */}
+      <div className="guide-lines">
+        <div className="guide-line"></div>
+        <div className="guide-line"></div>
+        <div className="guide-line"></div>
+        <div className="guide-line"></div>
+      </div>
+
       {/* Navigation */}
       <nav className={isScrolled ? "nav-scrolled" : ""}>
         <div className="nav-container">
@@ -75,7 +83,7 @@ const App = () => {
               Beldi <br />
               <span>Fusion.</span>
             </h1>
-            <a href="#infos" className="btn-primary">
+            <a href="#infos" className="btn-primary" style={{ marginTop: '2rem' }}>
               Réserver <ArrowUpRight size={18} />
             </a>
           </motion.div>
@@ -83,7 +91,11 @@ const App = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="section">
+      <section id="about" className="section" style={{ overflow: 'hidden' }}>
+        {/* Glow & Texture */}
+        <div className="ambient-glow" style={{ top: '30%', left: '20%' }}></div>
+        <div className="moroccan-bg"></div>
+
         {/* Massive scrolling watermark */}
         <motion.div className="watermark" style={{ x: watermarkX }}>
           CASABLANCA MARRAKECH EXCELLENCE
@@ -117,8 +129,11 @@ const App = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             transition={{ staggerChildren: 0.2 }}
+            style={{ position: 'relative' }}
           >
-            <motion.h2 variants={fadeUp}>
+            <span className="section-num">01</span>
+            
+            <motion.h2 variants={fadeUp} className="section-header-pro">
               Redéfinir <br />
               <span>l'Authenticité.</span>
             </motion.h2>
@@ -141,17 +156,23 @@ const App = () => {
       <OrientalDivider />
 
       {/* Menu Showcase Section */}
-      <section id="menu" className="section menu-section">
-        <div className="container">
+      <section id="menu" className="section menu-section" style={{ position: 'relative', overflow: 'hidden' }}>
+        {/* Glow & Texture */}
+        <div className="ambient-glow" style={{ top: '50%', left: '80%' }}></div>
+        <div className="moroccan-bg" style={{ opacity: 0.15, backgroundSize: '100px 100px' }}></div>
+
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <motion.div 
-            className="menu-header"
+            className="menu-header section-header-pro"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeUp}
+            style={{ position: 'relative' }}
           >
-            <span className="hero-subtitle" style={{ marginBottom: '1rem' }}>L'Articulinaire</span>
-            <h2>Nos Créations</h2>
+            <span className="section-num" style={{ top: '-8rem', left: '50%', transform: 'translateX(-50%)', opacity: 0.04 }}>02</span>
+            <span className="hero-subtitle" style={{ marginBottom: '1rem', position: 'relative', zIndex: 2 }}>L'Articulinaire</span>
+            <h2 style={{ position: 'relative', zIndex: 2 }}>Nos Créations</h2>
           </motion.div>
 
           <div className="menu-showcase">
@@ -182,18 +203,21 @@ const App = () => {
       <OrientalDivider />
 
       {/* Experience / Instagram Embeds Section */}
-      <section id="experience" className="section">
-        <div className="container">
+      <section id="experience" className="section" style={{ position: 'relative' }}>
+        <div className="ambient-glow" style={{ top: '50%', left: '20%' }}></div>
+        <div className="moroccan-bg" style={{ opacity: 0.15, top: '20%' }}></div>
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <motion.div 
-            className="menu-header"
+            className="menu-header section-header-pro"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeUp}
-            style={{ marginBottom: '4rem' }}
+            style={{ marginBottom: '4rem', position: 'relative' }}
           >
-            <span className="hero-subtitle">Immersion Visuelle</span>
-            <h2>L'Atmosphère Beldi</h2>
+            <span className="section-num" style={{ top: '-8rem', left: '50%', transform: 'translateX(-50%)', opacity: 0.02 }}>03</span>
+            <span className="hero-subtitle" style={{ position: 'relative', zIndex: 2 }}>Immersion Visuelle</span>
+            <h2 style={{ position: 'relative', zIndex: 2 }}>L'Atmosphère Beldi</h2>
           </motion.div>
           
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '3rem', justifyContent: 'center' }}>
@@ -223,18 +247,20 @@ const App = () => {
       <OrientalDivider />
 
       {/* Informations Pratiques Section */}
-      <section id="infos" className="section" style={{ backgroundColor: 'var(--secondary-bg)', padding: '10rem 0' }}>
-        <div className="container">
+      <section id="infos" className="section" style={{ backgroundColor: 'var(--secondary-bg)', padding: '10rem 0', position: 'relative', overflow: 'hidden' }}>
+        <div className="moroccan-bg" style={{ opacity: 0.15, top: '20%' }}></div>
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <motion.div 
-            className="menu-header"
+            className="menu-header section-header-pro"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeUp}
-            style={{ marginBottom: '4rem', textAlign: 'center' }}
+            style={{ marginBottom: '4rem', textAlign: 'center', position: 'relative' }}
           >
-            <span className="hero-subtitle">Votre Visite</span>
-            <h2>Informations Pratiques</h2>
+            <span className="section-num" style={{ top: '-8rem', left: '50%', transform: 'translateX(-50%)', opacity: 0.02 }}>04</span>
+            <span className="hero-subtitle" style={{ position: 'relative', zIndex: 2 }}>Votre Visite</span>
+            <h2 style={{ position: 'relative', zIndex: 2 }}>Informations Pratiques</h2>
           </motion.div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', marginTop: '4rem' }}>

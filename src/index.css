@@ -200,6 +200,61 @@ nav {
   margin-left: 10vw;
 }
 
+/* Luxury Global Border (High-end restaurant feel) */
+body::before {
+  content: '';
+  position: fixed;
+  top: 15px; left: 15px; right: 15px; bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Background Ambient Texture */
+.ambient-glow {
+  position: absolute;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, rgba(0,0,0,0) 65%);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.moroccan-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  opacity: 0.2;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0L46 34L80 40L46 46L40 80L34 46L0 40L34 34L40 0Z' fill='%23D4AF37'/%3E%3C/svg%3E");
+  background-size: 150px 150px;
+  z-index: 0;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%);
+  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%);
+}
+
+/* Vertical Guide Lines for Editorial Layout */
+.guide-lines {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1400px;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.guide-line {
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 0%, rgba(255,255,255,0.03) 20%, rgba(255,255,255,0.03) 80%, transparent 100%);
+}
+
 .btn-primary {
   background-color: transparent;
   color: var(--text-light);
@@ -334,6 +389,27 @@ nav {
   font-style: italic;
   color: var(--accent-warm);
   margin-top: 3rem;
+}
+
+/* Editorial Numbers */
+.section-num {
+  position: absolute;
+  top: -5rem;
+  left: -2rem;
+  font-family: var(--font-serif);
+  font-size: 20rem;
+  color: rgba(255,255,255,0.03);
+  line-height: 1;
+  z-index: 0;
+  pointer-events: none;
+  font-style: italic;
+}
+
+/* Specific Section Improvements */
+.section-header-pro {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 5rem;
 }
 
 /* Menu Hover Reveal Cards */
