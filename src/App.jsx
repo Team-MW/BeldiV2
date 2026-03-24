@@ -41,7 +41,9 @@ const App = () => {
       {/* Navigation */}
       <nav className={isScrolled ? "nav-scrolled" : ""}>
         <div className="nav-container">
-          <div className="logo">Beldifusion</div>
+          <a href="#" className="logo">
+            <img src="/logo.png" alt="Beldifusion Kitchen" className="site-logo" />
+          </a>
           <div className="nav-links">
             <a href="#about">L'Héritage</a>
             <a href="#menu">Créations</a>
@@ -295,7 +297,9 @@ const App = () => {
       <footer id="contact">
         <div className="container">
           <div className="footer-top">
-            <h2 className="footer-title">BELDI <br/><span style={{ color: 'var(--accent-warm)', fontStyle: 'italic', marginLeft: '10vw'}}>FUSION.</span></h2>
+            <a href="#">
+              <img src="/logo.png" alt="Beldifusion Kitchen" className="footer-logo" />
+            </a>
             
             <div className="footer-social">
               <a href="https://www.instagram.com/beldifusionkitchen.ma/" target="_blank" rel="noopener noreferrer" className="social-circle">

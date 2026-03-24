@@ -71,13 +71,17 @@ nav {
 }
 
 .logo {
-  font-family: var(--font-serif);
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: var(--accent-warm);
-  letter-spacing: 4px;
-  text-transform: uppercase;
   z-index: 1001;
+  display: flex;
+  align-items: center;
+}
+
+.site-logo {
+  height: 70px;
+  width: auto;
+  /* Convert black logo on white background to white logo with transparent/dark background */
+  filter: invert(1);
+  mix-blend-mode: screen;
 }
 
 .nav-links {
@@ -473,11 +477,10 @@ footer {
   gap: 3rem;
 }
 
-.footer-title {
-  font-family: var(--font-serif);
-  font-size: clamp(3rem, 8vw, 6rem);
-  line-height: 1;
-  color: var(--text-light);
+.footer-logo {
+  height: 140px;
+  filter: invert(1);
+  mix-blend-mode: screen;
 }
 
 .footer-social {
